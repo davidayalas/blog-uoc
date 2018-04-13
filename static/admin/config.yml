@@ -23,9 +23,12 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Data", name: "date", widget: "datetime"}
       - label: "Categories"
         name: "categories"
-        widget: "select"
-        options:
-          - { label: "General", value: "general" }
+        widget: "list"
+        allow_add: true
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
