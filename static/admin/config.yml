@@ -10,7 +10,7 @@ public_folder: "/images/uploads"
 collections: # A list of collections the CMS should be able to edit
   - name: "posts_ca"
     label: "Posts CA"
-    folder: "content/post"
+    folder: "content/posts"
     filter: {field: "language", value: "ca"}    
     create: true
     slug: "{{slug}}.{{language}}"
@@ -35,7 +35,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "posts_es"
     label: "Posts ES"
-    folder: "content/post"
+    folder: "content/posts"
     filter: {field: "language", value: "es"}    
     create: true
     slug: "{{slug}}.{{language}}"
@@ -59,7 +59,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "posts_en"
     label: "Posts EN"
-    folder: "content/post"
+    folder: "content/posts"
     filter: {field: "language", value: "en"}    
     create: true
     slug: "{{slug}}.{{language}}"
