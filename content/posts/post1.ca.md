@@ -1,11 +1,19 @@
 ---
-title: CA - Odio nonumes eam ut, est vitae laudem deserunt in.
-description: Saepe putent usu cu. Cu cibo populo nec, eu tacimates adversarium mel. Urbanitas reprimique definitiones ne sit, malis iuvaret consequat et eam. Eu sale maiorum urbanitas vel, diam nemore at nec. Pri errem alienum complectitur an.
-language: "ca"
-date: "2018-01-12"
-categories: ["general"]
-author: "Jo"
-tags: ["a", "b"]
+language: ca
+author: Jo
+title: 'CA - Odio nonumes eam ut, est vitae laudem deserunt in.'
+description: >-
+  Saepe putent usu cu. Cu cibo populo nec, eu tacimates adversarium mel.
+  Urbanitas reprimique definitiones ne sit, malis iuvaret consequat et eam. Eu
+  sale maiorum urbanitas vel, diam nemore at nec. Pri errem alienum complectitur
+  an.
+date: '2018-01-12'
+categories:
+  - general
+  - testing
+tags:
+  - a
+  - b
 ---
 
 Vis ne eligendi posidonium. Delenit nostrum in his. Ad sed albucius hendrerit consequat, ea est errem noluisse. Nec ex rebum sapientem, pro no iisque maiorum.
