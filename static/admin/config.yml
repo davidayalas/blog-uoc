@@ -8,8 +8,8 @@ public_folder: "/images/uploads"
 #publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "posts"
-    label: "Posts ca"
+  - name: "Posts_CA"
+    label: "Posts CA"
     folder: "content/post"
     filter: {field: "language", value: "ca"}    
     create: true
@@ -30,7 +30,7 @@ collections: # A list of collections the CMS should be able to edit
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
 
-  - name: "posts"
+  - name: "Posts_ES"
     label: "Posts ES"
     folder: "content/post"
     filter: {field: "language", value: "es"}    
@@ -52,7 +52,7 @@ collections: # A list of collections the CMS should be able to edit
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
 
-  - name: "posts"
+  - name: "Posts EN"
     label: "Posts EN"
     folder: "content/post"
     filter: {field: "language", value: "en"}    
