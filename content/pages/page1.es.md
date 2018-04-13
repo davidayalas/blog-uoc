@@ -1,6 +1,7 @@
 ---
 title: Página 1
 description: Esta es una página de prueba
+language: "es"
 date: "2018-04-12"
 ---
 

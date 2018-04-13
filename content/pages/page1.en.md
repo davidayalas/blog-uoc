@@ -1,6 +1,7 @@
 ---
 title: Page 1
 description: This is a test page
+language: "en"
 date: "2018-04-12"
 ---
 

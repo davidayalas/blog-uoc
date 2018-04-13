@@ -1,6 +1,7 @@
 ---
 title: Pàgina 1
 description: Aquesta és una plana de prova
+language: "ca"
 date: "2018-04-12"
 ---
 
