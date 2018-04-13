@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: davidayalas/blog-uoc 
   branch: master
+  name: git-gateway
   #base_url: http://netlify-oauth.azurewebsites.net # Path to ext auth provider
 
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads

@@ -1,5 +1,5 @@
 title = "Blog Template"
-baseURL = "http://localhost:1313/"
+baseURL = ""
 DefaultContentLanguage = "ca"
 theme = "blog-uoc-1"
 
