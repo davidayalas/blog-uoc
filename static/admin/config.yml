@@ -8,7 +8,7 @@ public_folder: "/images/uploads"
 #publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "Posts_CA"
+  - name: "posts_ca"
     label: "Posts CA"
     folder: "content/post"
     filter: {field: "language", value: "ca"}    
@@ -33,7 +33,7 @@ collections: # A list of collections the CMS should be able to edit
       - preview: false      
 
 
-  - name: "Posts_ES"
+  - name: "posts_es"
     label: "Posts ES"
     folder: "content/post"
     filter: {field: "language", value: "es"}    
@@ -57,7 +57,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false      
 
-  - name: "Posts EN"
+  - name: "posts_en"
     label: "Posts EN"
     folder: "content/post"
     filter: {field: "language", value: "en"}    

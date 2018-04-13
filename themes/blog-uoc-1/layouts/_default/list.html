@@ -19,7 +19,7 @@
 
               <h1 class="font-alternate">{{ .Title }}</h1>
                           
-              {{ range where .Paginator.Pages "Section" "post" }}
+              {{ range where .Paginator.Pages "Section" "posts" }}
                 {{ partial "post-home.html" . }}
               {{ end }}
                 

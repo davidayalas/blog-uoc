@@ -37,7 +37,7 @@
                         </div>                        
                       {{ end }}
 
-                      {{ if eq .Section "post" }}
+                      {{ if eq .Section "posts" }}
                         
                         <div class="col-xs-12 col-sm-11">
                           {{ partial "post-single.html" . }}
@@ -56,7 +56,7 @@
 
               </div><!-- row -->
 
-              {{ if eq .Section "post" }}
+              {{ if eq .Section "posts" }}
                 {{ partial "categories.html" . }}
               {{ end }}
       </div><!-- container -->

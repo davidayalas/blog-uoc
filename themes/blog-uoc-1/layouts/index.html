@@ -17,7 +17,7 @@
 	    <div class="row">
             <div class="col-md-8">            
                     
-				{{ range where .Paginator.Pages "Section" "post" }}
+				{{ range where .Paginator.Pages "Section" "posts" }}
 					{{ partial "post-home.html" . }}
 			    {{ end }}
 			    
