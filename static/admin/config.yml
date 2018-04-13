@@ -29,6 +29,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false      
+
 
   - name: "Posts_ES"
     label: "Posts ES"
@@ -51,6 +54,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false      
 
   - name: "Posts EN"
     label: "Posts EN"
@@ -73,6 +78,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false      
 
   - name: "Pages_CA"
     label: "Pàgines CA"
@@ -88,6 +95,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false      
 
   - name: "Pages_ES"
     label: "Páginas ES"
@@ -103,6 +112,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false      
 
   - name: "Pages_EN"
     label: "Pages EN"
@@ -118,4 +129,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
+    editor:
+      - preview: false      
 
