@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="brand-secondary">
+
+  {{ partial "header_uoc.html" . }}
+
+  <main id="main" class="site-main" role="main">
+      <div class="container">
+          
+      {{ partial "title.html" . }}
+
+      <div class="row">
+
+                <div class="col-md-8 section__main">                          
+
+                  <div class="row">
+
+                      <div class="col-sm-1 hidden-xs">
+                          {{ partial "share.html" . }}
+                      </div>
+
+                      {{ if eq .Section "pages" }}
+                        <div class="col-xs-12 col-sm-11">
+                            <div class="block-content-static">
+                                <div class="wrap-content">
+                                    <h1 class="font-alternate">{{ .Title }}</h1>
+                                    <div class="color-grey-dark  p-top-3y">
+                                      {{ .Content }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                      {{ end }}
+
+                      {{ if eq .Section "post" }}
+                        
+                        <div class="col-xs-12 col-sm-11">
+                          {{ partial "post-single.html" . }}
+                          <div class="block-accordion p-bottom-6y">
+                              <div class="col-sm-12" data-collapse-system="" role="list">
+                              </div>
+                          </div>
+                          <div data-tab-system="" class="block-tabs tab-sytem p-bottom-6y">
+                          </div>
+                          {{ partial "tags.html" . }}
+                        </div>
+
+                      {{ end }}
+                    </div>
+
+
+              </div><!-- row -->
+
+              {{ if eq .Section "post" }}
+                {{ partial "categories.html" . }}
+              {{ end }}
+      </div><!-- container -->
+  </main>
+
+  {{ partial "footer.html" . }}
+
+
+</body>
+
+</html>

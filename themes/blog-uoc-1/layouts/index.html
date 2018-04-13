@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body class="brand-secondary">
+
+	{{ partial "header_uoc.html" . }}
+
+	<main id="main" class="site-main" role="main">
+	    <div class="container">
+	       
+    	{{ partial "title.html" . }}
+
+	    <div class="row">
+            <div class="col-md-8">            
+                    
+				{{ range where .Paginator.Pages "Section" "post" }}
+					{{ partial "post-home.html" . }}
+			    {{ end }}
+			    
+            </div><!-- row -->
+
+		    {{ template "_internal/pagination.html" . }}
+
+            {{ partial "categories.html" . }}
+    
+
+	    </div><!-- container -->
+	</main>
+
+	{{ partial "footer.html" . }}
+
+
+</body>
+
+</html>

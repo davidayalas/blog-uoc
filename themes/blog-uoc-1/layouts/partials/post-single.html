@@ -1,0 +1,18 @@
+<div class="block-content-entry">
+  <div class="wrap-content">
+    <span class="uppercase-block color-grey-dark">
+      <span class="entry-category">
+        {{$ncat := (len .Params.categories)}}
+        {{ range $index, $category := .Params.categories }}
+          {{ $category }} {{ if lt (add $index 1) $ncat }}, {{ end }}
+        {{ end }}        
+      </span>
+    </span>
+    <h1 class="font-alternate p-top-3y p-bottom-2y">{{ .Title }}</h1>
+    <span class="uppercase-block color-grey-dark m-right-3x">{{ .Params.author }}</span>
+    <span class="uppercase-block color-grey-dark">{{ partial "post-date.html" .}}</span>
+        <div class="p-top-3y p-bottom-2y color-grey-dark content__container">
+        <p>{{ .Description }}</p>
+    </div>
+  </div>
+</div>

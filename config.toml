@@ -1,0 +1,42 @@
+title = "Blog Template"
+baseURL = "http://localhost:1313/"
+DefaultContentLanguage = "ca"
+theme = "blog-uoc-1"
+
+paginate = 10
+preserveTaxonomyNames = true
+
+defaultContentLanguageInSubdir = true
+
+[Taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[languages]
+
+  [languages.ca]
+    title = "Blog UOC - ca"
+    weight = 1
+    languageName = "Català"
+    [languages.ca.params]
+      subtitol = "Plantilla per a blogs o sites estàtics UOC"
+      categories = "Categories"
+      tags = "Tags"
+
+  [languages.es]
+    title = "Blog UOC - es"
+    weight = 2
+    languageName = "Castellano"
+    [languages.es.params]
+      subtitol = "Plantilla para blogs o sitios estáticos UOC"
+      categories = "Categorías"
+      tags = "Tags"
+
+  [languages.en]
+    title = "Blog UOC - en"
+    weight = 3
+    languageName = "English"
+    [languages.en.params]
+      subtitol = "Template for UOC static blogs"
+      categories = "Categories"
+      tags = "Tags"

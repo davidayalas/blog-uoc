@@ -1,0 +1,13 @@
+{{ if gt (len .Site.Taxonomies.tags) 0 }}
+{{ $lang := .Lang }}
+<div class="list-tags clearfix">
+  <h5 class="uppercase-block font-default">Tags</h5>
+  <ul class="list--inline list--unstyled">
+	  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+	    <li>
+	    	<a href="/{{$lang}}/tags/{{ $name | urlize }}">{{ lower $name }}</a>
+	    </li>
+	  {{ end }}  		
+  </ul>
+</div>
+{{ end }}

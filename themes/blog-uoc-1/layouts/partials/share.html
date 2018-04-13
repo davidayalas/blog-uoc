@@ -1,0 +1,23 @@
+  <div class="block-share">
+    <ul class="list--unstyled text-big">
+      <li>
+        <a href="http://twitter.com/share?url={{ absURL .URL }}&amp;text={{ .Title }}" target="_blank" aria-label="twitter">
+          <span class="icon icon--social-twitter text-big" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.facebook.com/sharer.php?u={{ absURL .URL }}&amp;t={{ .Title }}" target="_blank" aria-label="facebook">
+          <span class="icon icon--social-facebook text-big" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a href="whatsapp://send?text={{ absURL .URL }}" data-action="share/whatsapp/share" target="_blank" aria-label="whatsapp">
+          <span class="icon icon--social-whatsapp text-big" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ absURL .URL }}&amp;title={{ .Title }}&amp;summary={{ .Description }}&amp;source=UOCuniversidad" target="_blank" aria-label="linkedin"><span class="icon icon--social-linkedin text-big" aria-hidden="true"></span>
+          </a>
+      </li>                          
+    </ul>
+  </div>

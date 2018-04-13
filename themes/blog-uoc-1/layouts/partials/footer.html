@@ -1,0 +1,76 @@
+    <footer role="contentinfo" class="hidden-xs hidden-sm font-alternate">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 -lg-4">
+            <h4 class=footer-title>Universitat Oberta de Catalunya</h4>
+          </div>
+          <div class="col-md-9 col-lg-8">
+            <ul id="menu-footer-menu-1" class="footer-menu text-extra-small list--inline">
+
+              <li class="ruler--secondary menu-item menu-item-type-custom menu-item-object-custom menu-item-244 ruler dropdown-secondary__option col-sm-2"><a class="dropdown-secondary__option__item border-top--none" href="http://www.uoc.edu">UOC</a></li>
+              <li class="ruler--ri menu-item menu-item-type-custom menu-item-object-custom menu-item-254 ruler dropdown-secondary__option col-sm-2"><a class="dropdown-secondary__option__item border-top--none" href="http://research.uoc.edu">UOC R&#038;I</a></li>
+              <li class="ruler--x menu-item menu-item-type-custom menu-item-object-custom menu-item-264 ruler dropdown-secondary__option col-sm-2"><a class="dropdown-secondary__option__item border-top--none" href="http://x.uoc.edu">UOC X</a></li>
+              <li class="ruler--corporate menu-item menu-item-type-custom menu-item-object-custom menu-item-274 ruler dropdown-secondary__option col-sm-2"><a class="dropdown-secondary__option__item border-top--none" href="http://corporate.uoc.edu">UOC Corporate</a></li>
+              <li class="ruler--alumni menu-item menu-item-type-custom menu-item-object-custom menu-item-284 ruler dropdown-secondary__option col-sm-2"><a class="dropdown-secondary__option__item border-top--none" href="http://alumni.uoc.edu">UOC Alumni</a></li>
+              <li class="ruler--media menu-item menu-item-type-custom menu-item-object-custom menu-item-294 ruler dropdown-secondary__option col-sm-2"><a class="dropdown-secondary__option__item border-top--none" href="http://media.uoc.edu">UOC Media</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type='text/javascript' src='/js/gef.min.js?ver=4.9.4'></script>
+    <script type='text/javascript' src='/js/scripts.min.js?ver=4.9.4'></script>
+
+    <div id="cookie-law-info-bar">
+        <div class="container">
+
+          {{ if eq .Lang "en" }}
+          <span>We use our own and third party cookies. The analysis of the data that we collect allows us to improve the web and offer more personalized information and services. If you continue browsing, we consider that you accept its use. For more information, see the <a href="http://www.uoc.edu/portal/en/_peu/avis_legal/politica-galetes/index.html" id="CONSTANT_OPEN_URL" target="_blank"  class="cli-plugin-main-link"  >cookies policy.</a> <a href="#" id="cookie_action_close_header"  class="medium cli-plugin-button cli-plugin-main-button" >Accept</a>
+          </span>
+          {{ end }}
+
+          {{ if eq .Lang "es" }}
+          <span>Utilizamos galletas propias y de terceros. El análisis de los datos que recopilamos nos permite mejorar el web y ofrecer una información y unos servicios más personalizados. Si continúas navegando, consideramos que aceptas su uso. Para más información, consulta la <a href="http://www.uoc.edu/portal/es/_peu/avis_legal/politica-galetes/index.html" id="CONSTANT_OPEN_URL" target="_blank"  class="cli-plugin-main-link"  >política de cookies.</a> <a href="#" id="cookie_action_close_header"  class="medium cli-plugin-button cli-plugin-main-button" >Acepta</a>
+          </span>
+          {{ end }}
+
+          {{ if eq .Lang "ca" }}
+          <span>Utilitzem galetes pròpies i de tercers. L’anàlisi de les dades que recopilem ens permet millorar el web i oferir una informació i uns serveis més personalitzats. Si continues navegant, considerem que n’acceptes l’ús. Per a més informació, consulta la <a href="http://www.uoc.edu/portal/ca/_peu/avis_legal/politica-galetes/index.html" id="CONSTANT_OPEN_URL" target="_blank"  class="cli-plugin-main-link"  >política de galetes.</a> <a href="#" id="cookie_action_close_header"  class="medium cli-plugin-button cli-plugin-main-button" >Acepta</a>
+          </span>
+          {{ end }}
+
+        </div>
+    </div>
+    
+    <div id="cookie-law-info-again">
+      {{ if eq .Lang "en" }}
+      <span id="cookie_hdr_showagain">Cookies Policy</span>
+      {{ end }}
+
+      {{ if eq .Lang "es" }}
+      <span id="cookie_hdr_showagain">Policy de Cookies</span>
+      {{ end }}
+
+      {{ if eq .Lang "ca" }}
+      <span id="cookie_hdr_showagain">Política de Galetes</span>
+      {{ end }}
+    </div>    
+    
+    <script type="text/javascript">
+      //<![CDATA[
+      jQuery(document).ready(function() {
+        cli_show_cookiebar({
+          settings: '{"animate_speed_hide":"500","animate_speed_show":"500","background":"#fff","border":"#444","border_on":true,"button_1_button_colour":"#000","button_1_button_hover":"#000000","button_1_link_colour":"#fff","button_1_as_button":true,"button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":false,"font_family":"inherit","header_fix":false,"notify_animate_hide":true,"notify_animate_show":false,"notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":false,"scroll_close_reload":false,"showagain_tab":true,"showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#000","show_once_yn":false,"show_once":"10000"}'
+        });
+      });
+      //]]>
+    </script>
+    
+    <noscript>
+      <iframe src="//www.googletagmanager.com/ns.html?id=GTM-WPH62M" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WPH62M');
+    </script>

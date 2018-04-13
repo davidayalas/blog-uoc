@@ -1,0 +1,30 @@
+<div class="m-bottom-6y">
+  <div class="block-post-without-img">
+      {{$ncat := (len .Params.categories)}}
+      {{ $lang := .Lang }}
+
+      {{ if gt (len .Params.categories) 0 }}
+        {{ range $index, $category := .Params.categories }}
+            <a href="/{{$lang}}/categories/{{ $category | urlize }}"  class="category-name uppercase-block" title="{{ $category }}" style="display: inline">
+              {{ $category }}
+            </a>{{ if lt (add $index 1) $ncat }}, {{ end }}
+        {{ end }}
+      {{ end }}
+      <a href="{{ .URL }}">
+        <h2 class="font-alternate"><span class="highlighted">{{ .Title }}</span></h2>
+      </a>
+      <div class="color-grey-dark">
+        <p>{{ .Description}}</p>
+      </div>
+      <div class="item-post-footer clearfix">
+        <div class="date pull-left color-grey-dark">
+          <span>{{ partial "post-date.html" .}}</span>
+        </div>
+        <!--div class="comments pull-right"><a href="http://dretinternet.blogs.uoc.edu/2017/11/09/hola-mundo/">
+          <span class="add-comment">Add comment</span>
+          <div class="icon icon--comment icon--small pull-right"> </div></a>
+        </div-->
+      </div>
+  </div>
+</div>
+

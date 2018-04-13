@@ -1,0 +1,15 @@
+  {{ .Date.Day }} 
+
+  {{ if eq .Lang "en" }}
+  	{{ index $.Site.Data.months (printf "%d" .Date.Month) }},
+  {{ end }}
+
+  {{ if eq .Lang "es" }}
+  	{{ index $.Site.Data.meses (printf "%d" .Date.Month) }},
+  {{ end }}
+
+  {{ if eq .Lang "ca" }}
+  	{{ index $.Site.Data.mesos (printf "%d" .Date.Month) }},
+  {{ end }}
+
+  {{ .Date.Year }}

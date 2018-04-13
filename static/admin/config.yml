@@ -1,0 +1,76 @@
+backend:
+  name: github
+  repo: davidayalas/blog-uoc 
+  branch: master
+  #base_url: http://netlify-oauth.azurewebsites.net # Path to ext auth provider
+
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads"
+#publish_mode: editorial_workflow
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "posts"
+    label: "Posts ca"
+    folder: "content/post"
+    filter: {field: "language", value: "ca"}    
+    create: true
+    slug: "{{slug}}.{{language}}"
+    fields:
+      - {label: "Esborrany", name: "draft", widget: "boolean", default: true}
+      - {label: "Idioma", name: "language", widget: "select", options: ["ca", "es", "en"]}
+      - {label: "Autor", name: "author", widget: "string", required: true}
+      - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        options:
+          - { label: "General", value: "general" }
+      - {label: "Contingut", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+
+  - name: "posts"
+    label: "Posts ES"
+    folder: "content/post"
+    filter: {field: "language", value: "es"}    
+    create: true
+    slug: "{{slug}}.{{language}}"
+    fields:
+      - {label: "Esborrany", name: "draft", widget: "boolean", default: true}
+      - {label: "Idioma", name: "language", widget: "select", options: ["es", "ca", "en"]}
+      - {label: "Autor", name: "author", widget: "string", required: true}
+      - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        options:
+          - { label: "General", value: "general" }
+      - {label: "Contingut", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+
+  - name: "posts"
+    label: "Posts EN"
+    folder: "content/post"
+    filter: {field: "language", value: "en"}    
+    create: true
+    slug: "{{slug}}.{{language}}"
+    fields:
+      - {label: "Esborrany", name: "draft", widget: "boolean", default: true}
+      - {label: "Idioma", name: "language", widget: "select", options: ["ca", es", "en"]}
+      - {label: "Autor", name: "author", widget: "string", required: true}
+      - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
+      - {label: "Data", name: "date", widget: "datetime"}
+      - label: "Categories"
+        name: "categories"
+        widget: "select"
+        options:
+          - { label: "General", value: "general" }
+      - {label: "Contingut", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
