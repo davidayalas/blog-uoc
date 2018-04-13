@@ -73,3 +73,49 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
+
+  - name: "Pages_CA"
+    label: "Pàgines CA"
+    folder: "content/pages"
+    filter: {field: "language", value: "ca"}    
+    create: true
+    slug: "{{slug}}.{{language}}"
+    fields:
+      - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
+      - {label: "Idioma", name: "language", widget: "select", options: ["ca", "es", "en"]}
+      - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
+      - {label: "Contingut", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+
+  - name: "Pages_ES"
+    label: "Páginas ES"
+    folder: "content/pages"
+    filter: {field: "language", value: "es"}    
+    create: true
+    slug: "{{slug}}.{{language}}"
+    fields:
+      - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
+      - {label: "Idioma", name: "language", widget: "select", options: ["es", "ca", "en"]}
+      - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
+      - {label: "Contingut", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+
+  - name: "Pages_EN"
+    label: "Pages EN"
+    folder: "content/pages"
+    filter: {field: "language", value: "en"}    
+    create: true
+    slug: "{{slug}}.{{language}}"
+    fields:
+      - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
+      - {label: "Idioma", name: "language", widget: "select", options: ["en", "ca", "es"]}
+      - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Descripció", name: "description", widget: "text", required: false}
+      - {label: "Contingut", name: "body", widget: "markdown"}
+    meta:
+      - {label: "Date", name: "date", widget: "datetime"}
+
