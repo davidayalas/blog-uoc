@@ -1,7 +1,7 @@
 ---
 language: en
 author: Jo
-title: 'ES - Odio nonumes eam ut, est vitae laudem deserunt in.'
+title: 'EN - Odio nonumes eam ut, est vitae laudem deserunt in.'
 description: >-
   Saepe putent usu cu. Cu cibo populo nec, eu tacimates adversarium mel.
   Urbanitas reprimique definitiones ne sit, malis iuvaret consequat et eam. Eu
