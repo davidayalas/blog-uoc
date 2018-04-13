@@ -84,7 +84,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false      
 
-  - name: "Pages_CA"
+  - name: "pages_ca"
     label: "Pàgines CA"
     folder: "content/pages"
     filter: {field: "language", value: "ca"}    
@@ -101,7 +101,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false      
 
-  - name: "Pages_ES"
+  - name: "pages_es"
     label: "Páginas ES"
     folder: "content/pages"
     filter: {field: "language", value: "es"}    
@@ -118,7 +118,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       - preview: false      
 
-  - name: "Pages_EN"
+  - name: "pages_en"
     label: "Pages EN"
     folder: "content/pages"
     filter: {field: "language", value: "en"}    
