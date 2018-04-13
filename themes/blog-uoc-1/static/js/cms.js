@@ -28,9 +28,6 @@ if(getUrlParams("cms")==="true"){
         }
     });
     
-    pathLength = path.length;
-    //path = path.slice(1).join("/")+"."+path[0];
-
     if(currentHost.indexOf(":")>-1){
         currentHost = currentHost.slice(0, currentHost.indexOf(":"));
     }
@@ -42,20 +39,27 @@ if(getUrlParams("cms")==="true"){
     })
 
     var strpagesection = "pàgina";
-    if(pathLength>1){
-        var editlink = $("#cms-editor-link-edit").attr("href").replace("@@collection@@", path[1]);
+    var collection = path[1]+"_"+path[0];
+    var entry = path[2]+"."+path[0];
+
+    if(path.length>1){
+        var editlink = $("#cms-editor-link-edit").attr("href").replace("@@collection@@", collection);
         if(path.length>2){
-            editlink = editlink.replace("@@entry@@", path[2] + "." + path[0]);
+            $("#cms-editor-link-edit").css("display","block");
+            editlink = editlink.replace("@@entry@@", entry);
         }else{
-            editlink = editlink.replace("/entries/@@entry@@", "");
             $("#cms-editor-link-add").css("display","block");
-            var addlink = $("#cms-editor-link-add").attr("href").replace("@@collection@@", path[0]);
+            var addlink = $("#cms-editor-link-add").attr("href").replace("@@collection@@", collection);
             $("#cms-editor-link-add").attr("href", addlink);
-            strpagesection = "secció";
+            $("#cms-editor-link-edit").css("display","none");
         }
     }else{
         //home
-        editlink = "/admin/#/collections/home/entries/home";
+        collection = "posts"+"_"+path[0];
+        var addlink = $("#cms-editor-link-add").attr("href").replace("@@collection@@", collection);
+        $("#cms-editor-link-add").attr("href", addlink);
+        $("#cms-editor-link-edit").css("display","none");
+        $("#cms-editor-link-add").css("display","block");
     }
 
     $("#cms-editor-link-edit").attr("href", editlink);

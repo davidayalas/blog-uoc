@@ -18,17 +18,36 @@
             <div class="col-md-8">            
 
               <h1 class="font-alternate">{{ .Title }}</h1>
-                          
-              {{ range where .Paginator.Pages "Section" "posts" }}
-                {{ partial "post-home.html" . }}
+
+              {{ if ne .Section "pages" }}
+                {{ range where .Paginator.Pages "Section" "posts" }}
+                  {{ partial "post-home.html" . }}
+                {{ end }}
               {{ end }}
+
+              {{ if eq .Section "pages" }}
+                {{ range where .Paginator.Pages "Section" "pages" }}
+                    <div class="m-bottom-6y">
+                      <div class="block-post-without-img">
+                          <a href="{{ .URL }}">
+                            <h2 class="font-alternate"><span class="highlighted">{{ .Title }}</span></h2>
+                          </a>
+                          <div class="color-grey-dark">
+                            <p>{{ .Description}}</p>
+                          </div>
+                      </div>
+                    </div>                  
+                {{ end }}
+              {{ end }}
+
                 
             </div><!-- row -->
 
               {{ template "_internal/pagination.html" . }}
 
-              {{ partial "categories.html" . }}
-          
+              {{ if ne .Section "pages" }}
+               {{ partial "categories.html" . }}
+              {{ end }}        
 
       </div><!-- container -->
   </main>
