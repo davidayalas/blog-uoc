@@ -13,11 +13,12 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/posts"
     filter: {field: "language", value: "ca"}    
     create: true
-    slug: "{{slug}}.{{language}}"
+    slug: "{{postkey}}.{{language}}"
     fields:
       - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Idioma", name: "language", widget: "select", options: ["ca", "es", "en"]}
       - {label: "Autor", name: "author", widget: "string", required: true}
+      - {label: "Clau", name: "postkey", widget: "string"}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
@@ -43,11 +44,12 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/posts"
     filter: {field: "language", value: "es"}    
     create: true
-    slug: "{{slug}}.{{language}}"
+    slug: "{{postkey}}.{{language}}"
     fields:
       - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Idioma", name: "language", widget: "select", options: ["ca", "es", "en"]}
       - {label: "Autor", name: "author", widget: "string", required: true}
+      - {label: "Clau", name: "postkey", widget: "string"}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
@@ -72,11 +74,12 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/posts"
     filter: {field: "language", value: "en"}    
     create: true
-    slug: "{{slug}}.{{language}}"
+    slug: "{{postkey}}.{{language}}"
     fields:
       - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Idioma", name: "language", widget: "select", options: ["ca", "es", "en"]}
       - {label: "Autor", name: "author", widget: "string", required: true}
+      - {label: "Clau", name: "postkey", widget: "string"}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
@@ -101,10 +104,11 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/pages"
     filter: {field: "language", value: "ca"}    
     create: true
-    slug: "{{slug}}.{{language}}"
+    slug: "{{postkey}}.{{language}}"
     fields:
       - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Idioma", name: "language", widget: "select", options: ["ca", "es", "en"]}
+      - {label: "Clau", name: "postkey", widget: "string"}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Contingut", name: "body", widget: "markdown"}
@@ -118,10 +122,11 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/pages"
     filter: {field: "language", value: "es"}    
     create: true
-    slug: "{{slug}}.{{language}}"
+    slug: "{{postkey}}.{{language}}"
     fields:
       - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Idioma", name: "language", widget: "select", options: ["es", "ca", "en"]}
+      - {label: "Clau", name: "postkey", widget: "string"}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Contingut", name: "body", widget: "markdown"}
@@ -135,10 +140,11 @@ collections: # A list of collections the CMS should be able to edit
     folder: "content/pages"
     filter: {field: "language", value: "en"}    
     create: true
-    slug: "{{slug}}.{{language}}"
+    slug: "{{postkey}}.{{language}}"
     fields:
       - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
       - {label: "Idioma", name: "language", widget: "select", options: ["en", "ca", "es"]}
+      - {label: "Clau", name: "postkey", widget: "string"}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Contingut", name: "body", widget: "markdown"}
