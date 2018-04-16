@@ -1,13 +1,15 @@
 <div class="m-bottom-6y">
   <div class="block-post-without-img">
-      {{$ncat := (len .Params.categories)}}
-      {{ $lang := .Lang }}
+      {{ if ne .Params.categories nil }}
+        {{$ncat := (len .Params.categories)}}
+        {{ $lang := .Lang }}
 
-      {{ if gt (len .Params.categories) 0 }}
-        {{ range $index, $category := .Params.categories }}
-            <a href="/{{$lang}}/categories/{{ $category | urlize }}"  class="category-name uppercase-block" title="{{ $category }}" style="display: inline">
-              {{ $category }}
-            </a>{{ if lt (add $index 1) $ncat }}, {{ end }}
+        {{ if gt (len .Params.categories) 0 }}
+          {{ range $index, $category := .Params.categories }}
+              <a href="/{{$lang}}/categories/{{ $category | urlize }}"  class="category-name uppercase-block" title="{{ $category }}" style="display: inline">
+                {{ $category }}
+              </a>{{ if lt (add $index 1) $ncat }}, {{ end }}
+          {{ end }}
         {{ end }}
       {{ end }}
       <a href="{{ .URL }}">
