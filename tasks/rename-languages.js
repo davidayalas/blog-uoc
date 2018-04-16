@@ -31,9 +31,9 @@ var walk = function(dir, done) {
 };
 
 //Renames netlifycms language files with "-[lang].md" to ".[lang].md"
-walk("../content", function(err, results){
+walk("./content", function(err, results){
   if(err){
-    console.log("error");
+    console.log("error " + err);
     return;
   }
 
