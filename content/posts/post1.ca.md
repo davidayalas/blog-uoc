@@ -10,7 +10,6 @@ description: >-
 date: '2018-01-12'
 categories:
   - general
-  - testing
 tags:
   - a
   - b
