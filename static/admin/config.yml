@@ -25,10 +25,12 @@ collections: # A list of collections the CMS should be able to edit
         name: "categories"
         widget: "list"
         allow_add: true
+        required: false
       - label: "Tags"
         name: "tags"
         widget: "list"
         allow_add: true
+        required: false
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
@@ -44,16 +46,21 @@ collections: # A list of collections the CMS should be able to edit
     slug: "{{slug}}.{{language}}"
     fields:
       - {label: "Esborrany", name: "draft", widget: "boolean", default: true, required: false}
-      - {label: "Idioma", name: "language", widget: "select", options: ["es", "ca", "en"]}
+      - {label: "Idioma", name: "language", widget: "select", options: ["ca", "es", "en"]}
       - {label: "Autor", name: "author", widget: "string", required: true}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
       - {label: "Data", name: "date", widget: "datetime"}
       - label: "Categories"
         name: "categories"
-        widget: "select"
-        options:
-          - { label: "General", value: "general" }
+        widget: "list"
+        allow_add: true
+        required: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        required: false
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
@@ -75,9 +82,14 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Data", name: "date", widget: "datetime"}
       - label: "Categories"
         name: "categories"
-        widget: "select"
-        options:
-          - { label: "General", value: "general" }
+        widget: "list"
+        allow_add: true
+        required: false
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        required: false
       - {label: "Contingut", name: "body", widget: "markdown"}
     meta:
       - {label: "Date", name: "date", widget: "datetime"}
