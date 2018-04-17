@@ -4,9 +4,9 @@
 	<div class="list-tags clearfix">
 	  <h5 class="uppercase-block font-default">Tags</h5>
 	  <ul class="list--inline list--unstyled">
-		  {{ range $name, $taxonomy := .Params.tags }}
+		  {{ range $index, $taxonomy := .Params.tags }}
 		    <li>
-		    	<a href="/{{$lang}}/tags/{{ $name | urlize }}">{{ lower $taxonomy }}</a>
+		    	<a href="/{{$lang}}/tags/{{ $taxonomy | urlize }}">{{ lower $taxonomy }}</a>
 		    </li>
 		  {{ end }}  		
 	  </ul>
