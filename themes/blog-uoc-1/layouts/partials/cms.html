@@ -3,7 +3,7 @@
       {{ $collection := replace .URL .File "" }}
       <div class="pull-left editpage">
         {{ if and (not .IsSection) (not .IsHome) }}
-          <a href="/admin/#/collections/{{.Section}}_{{.Lang}}/entries/{{ .File }}" id="cms-editor-link-edit" style="_display: none; color: #fff;">
+          <a href="/admin/#/collections/{{.Section}}_{{.Lang}}/entries/{{ replace .File "." "-"}}" id="cms-editor-link-edit" style="_display: none; color: #fff;">
             <span class="icon icon--edit text-small" aria-hidden="true"></span>Edita aquesta entrada</span>
           </a>
         {{ end }}
