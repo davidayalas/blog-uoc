@@ -55,7 +55,13 @@
       {{ end }}
     </div>    
 
-    <div class="row" style="display:none; margin-top:.5em; padding:.5em; padding-left: 1em; border:1px solid #ccc!important; background-color: #000; color: #fff" id="cms-editor">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery-migrate.min.js"></script>
+    <script src="/js/cookielawinfo.js"></script>
+    <script type='text/javascript' src='/js/gef.min.js?ver=4.9.4'></script>
+    <script type='text/javascript' src='/js/scripts.min.js?ver=4.9.4'></script>    
+
+    <!--div class="row" style="display:none; margin-top:.5em; padding:.5em; padding-left: 1em; border:1px solid #ccc!important; background-color: #000; color: #fff" id="cms-editor">
       <div class="pull-left editpage">
         <a href="/admin/#/collections/@@collection@@/new" id="cms-editor-link-add" style="display: none; color: #fff;">
           <span class="icon icon--plus text-small" aria-hidden="true"></span> Afegeix una entrada
@@ -65,13 +71,9 @@
         </a>
       </div>
     </div>
+    <script type='text/javascript' src='/js/cms.js'></script-->    
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/jquery-migrate.min.js"></script>
-    <script src="/js/cookielawinfo.js"></script>
-    <script type='text/javascript' src='/js/gef.min.js?ver=4.9.4'></script>
-    <script type='text/javascript' src='/js/scripts.min.js?ver=4.9.4'></script>    
-    <script type='text/javascript' src='/js/cms.js'></script>    
+    {{ partial "cms.html" . }}
     
     <script type="text/javascript">
       //<![CDATA[
