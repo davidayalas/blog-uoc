@@ -2,15 +2,24 @@
 
       {{ $collection := replace .URL .File "" }}
       <div class="pull-left editpage">
-        {{ if not .IsSection }}
+        {{ if and (not .IsSection) (not .IsHome) }}
           <a href="/admin/#/collections/{{.Section}}_{{.Lang}}/entries/{{ .File }}" id="cms-editor-link-edit" style="_display: none; color: #fff;">
-            <span class="icon icon--edit text-small" aria-hidden="true"></span>Edita aquesta secció</span>
+            <span class="icon icon--edit text-small" aria-hidden="true"></span>Edita aquesta entrada</span>
           </a>
         {{ end }}
 
-        {{ if .IsSection }}
+        {{ if (.IsSection) }}
           <a href="/admin/#/collections/{{.Section}}_{{.Lang}}/new" id="cms-editor-link-add" style="_display: none; color: #fff;">
             <span class="icon icon--plus text-small" aria-hidden="true"></span> Afegeix una entrada
+          </a>
+        {{ end }}
+
+        {{ if (.IsHome) }}
+          <a href="/admin/#/collections/posts_{{.Lang}}/new" id="cms-editor-link-add" style="_display: none; color: #fff;">
+            <span class="icon icon--plus text-small" aria-hidden="true"></span> Afegeix una entrada
+          </a>
+          <a href="/admin/#/collections/pages_{{.Lang}}/new" id="cms-editor-link-add" style="_display: none; color: #fff;">
+            <span class="icon icon--plus text-small" aria-hidden="true"></span> Afegeix una pàgina
           </a>
         {{ end }}
       </div>

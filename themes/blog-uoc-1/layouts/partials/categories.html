@@ -1,4 +1,4 @@
-{{ if ne $.Site.Taxonomies nil}}
+{{ if ne $.Site.Taxonomies.categories nil}}
 	{{ if gt (len $.Site.Taxonomies.categories) 0 }}
 	{{ $lang := .Lang }}
 	<aside class="col-md-4 section__secondary">
