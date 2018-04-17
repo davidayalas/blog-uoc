@@ -38,32 +38,5 @@ if(getUrlParams("cms")==="true"){
         }
     })
 
-    var strpagesection = "pàgina";
-    var collection = path[1]+"_"+path[0];
-    var entry = path[2]+"."+path[0];
-
-    if(path.length>1){
-        var editlink = $("#cms-editor-link-edit").attr("href").replace("@@collection@@", collection);
-        if(path.length>2){
-            $("#cms-editor-link-edit").css("display","block");
-            editlink = editlink.replace("@@entry@@", entry);
-        }else{
-            $("#cms-editor-link-add").css("display","block");
-            var addlink = $("#cms-editor-link-add").attr("href").replace("@@collection@@", collection);
-            $("#cms-editor-link-add").attr("href", addlink);
-            $("#cms-editor-link-edit").css("display","none");
-        }
-    }else{
-        //home
-        collection = "posts"+"_"+path[0];
-        var addlink = $("#cms-editor-link-add").attr("href").replace("@@collection@@", collection);
-        $("#cms-editor-link-add").attr("href", addlink);
-        $("#cms-editor-link-edit").css("display","none");
-        $("#cms-editor-link-add").css("display","block");
-    }
-
-    $("#cms-editor-link-edit").attr("href", editlink);
-    var link_text = $("#cms-editor-link-edit-text").text();
-    $("#cms-editor-link-edit-text").text(link_text.replace("@@pagesection@@", strpagesection));
     $("#cms-editor").css("display","block");
 }
