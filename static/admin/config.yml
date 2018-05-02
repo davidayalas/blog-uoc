@@ -1,13 +1,24 @@
 backend:
   branch: master
-  name: git-gateway
-  #base_url: http://netlify-oauth.azurewebsites.net # Path to ext auth provider
+  #name: git-gateway
+  name: github
+  repo: davidayalas/blog-uoc
+  base_url: http://netlify-oauth.azurewebsites.net # Path to ext auth provider
 
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads"
-#publish_mode: editorial_workflow
+media_folder: "/content/media" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/media/"
+publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
+  - name: "media"
+    label: "Media"
+    folder: "content/media"
+    create: true
+    fields:
+      - label: "Imatge"
+        name: "image"
+        widget: "image"
+
   - name: "posts_ca"
     label: "Posts CA"
     folder: "content/posts"
@@ -21,6 +32,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Clau", name: "postkey", widget: "string"}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
+      - label: "Imatge"
+        name: "image"
+        widget: "image"
       - {label: "Data", name: "date", widget: "datetime"}
       - label: "Categories"
         name: "categories"

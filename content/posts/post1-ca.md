@@ -9,10 +9,11 @@ description: >-
   an.
 date: '2018-01-12'
 categories:
-  - general
+- general
+
 tags:
-  - a
-  - b
+- a
+- b
 ---
 
 Vis ne eligendi posidonium. Delenit nostrum in his. Ad sed albucius hendrerit consequat, ea est errem noluisse. Nec ex rebum sapientem, pro no iisque maiorum.
