@@ -1,6 +1,7 @@
 ---
 language: ca
 author: Jo
+postkey: post1
 title: 'CA - Odio nonumes eam ut, est vitae laudem deserunt in.'
 description: >-
   Saepe putent usu cu. Cu cibo populo nec, eu tacimates adversarium mel.
@@ -12,8 +13,9 @@ categories:
 - general
 
 tags:
-- a
-- b
+  - a
+  - b
+  - c
 ---
 
 Vis ne eligendi posidonium. Delenit nostrum in his. Ad sed albucius hendrerit consequat, ea est errem noluisse. Nec ex rebum sapientem, pro no iisque maiorum.
