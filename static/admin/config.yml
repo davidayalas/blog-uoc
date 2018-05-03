@@ -12,12 +12,17 @@ publish_mode: editorial_workflow
 collections: # A list of collections the CMS should be able to edit
   - name: "media"
     label: "Media"
-    folder: "content/media"
-    create: true
+    file: "content/media/index.md"
+    create: false
     fields:
-      - label: "Imatge"
-        name: "image"
-        widget: "image"
+      - name: Image
+        label: Images
+        widget: list
+        fields:
+          - {label: "Títol", name: "title_ca", widget: string}
+          - {label: "Título", name: "title_es", widget: string}
+          - {label: "Title", name: "title_en", widget: string}
+          - {label: "Image", name: "image", widget: image}
 
   - name: "posts_ca"
     label: "Posts CA"

@@ -16,6 +16,18 @@
     <span class="uppercase-block color-grey-dark m-right-3x">{{ .Params.author }}</span>
     <span class="uppercase-block color-grey-dark">{{ partial "post-date.html" .}}</span>
         <div class="p-top-3y p-bottom-2y color-grey-dark content__container">
+        {{ $image := .Params.image }}
+        {{ if $image }}
+          {{ with .Site.GetPage "page" "media/index.md" }}
+            {{ $resources := .Resources.Match $image }}
+            {{ range $resources }}
+              {{ with . }}
+                {{ $image400x := .Resize "400x" }}
+                <img src="{{ $image400x.RelPermalink }}">
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
         <p>{{ .Description }}</p>
     </div>
   </div>
