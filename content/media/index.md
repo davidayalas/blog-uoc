@@ -1,8 +1,8 @@
 ---
-title: Media
-resources:
-  - title: Logo UOC
-    src: uoc.png
+Image:
+  - image: /media/uoc.png
+    title_ca: Prova
+    title_en: Prova
+    title_es: Prova
 ---
 
-# Media
