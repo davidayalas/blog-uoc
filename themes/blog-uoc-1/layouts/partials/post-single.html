@@ -30,10 +30,12 @@
         {{ end }}
 
         {{ $media := .Params.media }}
-        {{ with .Site.GetPage "page" "media/index.md" }}
-          {{ $mediapage := .Resources.GetMatch (print $media ".md") }}
-          {{ $mediaimage := .Resources.GetMatch $mediapage.Params.image }}
-          <img src="{{ $mediaimage.RelPermalink }}" />
+        {{ if $media }}
+          {{ with .Site.GetPage "page" "media/index.md" }}
+            {{ $mediapage := .Resources.GetMatch (print $media ".md") }}
+            {{ $mediaimage := .Resources.GetMatch $mediapage.Params.image }}
+            <img src="{{ $mediaimage.RelPermalink }}" />
+          {{ end }}
         {{ end }}
 
         <p>{{ .Description }}</p>
