@@ -1,7 +1,7 @@
 {{ $path := split .URL "/" }}
 
 <ul>
-	<li><a href="{{.Site.Params.projectDir}}/">{{ .Site.Title }}</a></li>
+	<li><a href="/">{{ .Site.Title }}</a></li>
 
   	{{ partial "breadcrumbs_recursive.html" (dict "sections" .Site.Home.Sections "level" 1 "path" $path "dir" .URL) }}
 

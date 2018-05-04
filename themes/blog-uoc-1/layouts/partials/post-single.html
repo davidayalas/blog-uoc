@@ -17,14 +17,46 @@
     <span class="uppercase-block color-grey-dark">{{ partial "post-date.html" .}}</span>
         <div class="p-top-3y p-bottom-2y color-grey-dark content__container">
         {{ $media := .Params.media }}
+
         {{ if $media }}
           {{ with .Site.GetPage "page" "media/index.md" }}
             {{ $mediapage := .Resources.GetMatch (print $media ".md") }}
+
+            
             {{ if $mediapage }}
               {{ $mediaimage := .Resources.GetMatch (replace $mediapage.Params.image "/media/" "") }}
               {{ if $mediaimage }}
-                <img src="{{ $mediaimage.RelPermalink }}" /><br/ >
-                {{ index $mediapage.Params (print "title_" ".Lang")}}
+                
+                {{ $caption := (index $mediapage.Params (print "title_" $.Lang)) }}
+
+                {{ if $caption }}
+                <figure>
+                {{ end }}
+
+                {{ $small := $mediaimage.Resize "300x" }} 
+                {{ $large := $mediaimage }}
+                {{ if gt $mediaimage.Width 600 }}                  
+                  {{ $large := $mediaimage.Resize "600x" }} 
+                {{ end }}
+
+                  <picture>
+                    <!-- Large screens -->
+                    <source
+                      media="(min-width: 535px)"
+                      srcset="{{ $large.RelPermalink }}">
+                    <!-- Small screens -->
+                    <source
+                      media="(max-width: 534px)"
+                      srcset="{{ $small.RelPermalink }}">
+                    <!-- Fallback -->
+                    <img src="{{ $large.RelPermalink }}" />
+                  </picture>
+                {{ if $caption }}
+                  <figcaption>{{ $caption }}</figcaption>
+                </figure>
+                {{ end }}        
+
+
               {{ end }}
             {{ end }}
           {{ end }}
