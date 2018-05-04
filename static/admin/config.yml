@@ -35,9 +35,13 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Clau", name: "postkey", widget: "string"}
       - {label: "Títol", name: "title", widget: "string", tagname: "h1"}
       - {label: "Descripció", name: "description", widget: "text", required: false}
-      - label: "Imatge"
-        name: "image"
-        widget: "image"
+      - label: "Media"
+        name: "media"
+        widget: "relation"
+        collection: "media"
+        searchFields: ["key", "title_ca", "title_en", "title_es"]
+        valueField: "key"
+        displayFields: ["key", "title_ca", "title_en", "title_es"]
       - {label: "Data", name: "date", widget: "datetime"}
       - label: "Categories"
         name: "categories"
