@@ -23,11 +23,19 @@
             {{ range $resources }}
               {{ with . }}
                 {{ $image400x := .Resize "400x" }}
-                <img src="{{ $image400x.RelPermalink }}">
+                <!--img src="{{ $image400x.RelPermalink }}"-->
               {{ end }}
             {{ end }}
           {{ end }}
         {{ end }}
+
+        {{ $media := .Params.media }}
+        {{ with .Site.GetPage "page" "media/index.md" }}
+          {{ $mediapage := .Resources.GetMatch (print $media ".md") }}
+          {{ $mediaimage := .Resources.GetMatch $mediapage.Params.image }}
+          <img src="{{ $mediaimage.RelPermalink }}" />
+        {{ end }}
+
         <p>{{ .Description }}</p>
     </div>
   </div>

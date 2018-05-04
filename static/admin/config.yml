@@ -7,25 +7,20 @@ backend:
 
 media_folder: "/content/media" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/media/"
-publish_mode: editorial_workflow
+#publish_mode: editorial_workflow
 
 collections: # A list of collections the CMS should be able to edit
   - name: "media"
     label: "Media"
-    files: 
-      - label: "Imatges"
-        name: "images"  
-        file: "content/media/index.md"
-        create: false
-        fields:
-          - name: Image
-            label: Images
-            widget: list
-            fields:
-              - {label: "Títol", name: "title_ca", widget: string}
-              - {label: "Título", name: "title_es", widget: string}
-              - {label: "Title", name: "title_en", widget: string}
-              - {label: "Image", name: "image", widget: image}
+    folder: "content/media"
+    create: true
+    slug: "{{key}}"
+    fields:
+      - {label: "Key", name: "key", widget: string}
+      - {label: "Títol", name: "title_ca", widget: string}
+      - {label: "Título", name: "title_es", widget: string}
+      - {label: "Title", name: "title_en", widget: string}
+      - {label: "Image", name: "image", widget: image}
 
   - name: "posts_ca"
     label: "Posts CA"
