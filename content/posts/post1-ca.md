@@ -8,7 +8,7 @@ description: >-
   Urbanitas reprimique definitiones ne sit, malis iuvaret consequat et eam. Eu
   sale maiorum urbanitas vel, diam nemore at nec. Pri errem alienum complectitur
   an.
-media: Logo
+media: masterbrand
 date: '2018-01-12'
 categories:
   - general
