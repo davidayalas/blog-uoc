@@ -2,7 +2,7 @@ backend:
   name: github
   repo: davidayalas/blog-uoc
   branch: master
-  base_url: http://netlify-oauth.azurewebsites.net # Path to ext auth provider
+  base_url: https://netlify-oauth.azurewebsites.net
   #client_id: b135b68c2ba0bd0c422a
   #name: git-gateway
 
