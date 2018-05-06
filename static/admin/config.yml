@@ -1,10 +1,10 @@
 backend:
-  branch: master
-  #name: git-gateway
   name: github
   repo: davidayalas/blog-uoc
-  client_id: b135b68c2ba0bd0c422a
-  base_url: http://netlify-oauth.azurewebsites.net # Path to ext auth provider
+  branch: master
+  #base_url: http://netlify-oauth.azurewebsites.net # Path to ext auth provider
+  #client_id: b135b68c2ba0bd0c422a
+  #name: git-gateway
 
 media_folder: "/content/media" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/ca/media/"

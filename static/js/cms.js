@@ -226,6 +226,7 @@ function createSection(lang, langs){
 
 ***********************************************************************************************************************/
 function githubAuth(cb){
+    console.log("github auth")
     if(!window.localStorage.getItem('token')){
         window.cms.authWindow = window.open(
             "https://github.com/login/oauth/authorize?client_id=" + window.cms.client_id,
