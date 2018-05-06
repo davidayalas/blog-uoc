@@ -40,3 +40,6 @@ defaultContentLanguageInSubdir = true
       subtitol = "Template for UOC static blogs"
       categories = "Categories"
       tags = "Tags"
+
+[params]
+  webtype = "blog"

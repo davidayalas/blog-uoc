@@ -24,7 +24,7 @@
 
             
             {{ if $mediapage }}
-              {{ $mediaimage := .Resources.GetMatch (replace $mediapage.Params.image "/media/" "") }}
+              {{ $mediaimage := .Resources.GetMatch (replace $mediapage.Params.image "/ca/media/" "") }}
               {{ if $mediaimage }}
                 
                 {{ $caption := (index $mediapage.Params (print "title_" $.Lang)) }}
