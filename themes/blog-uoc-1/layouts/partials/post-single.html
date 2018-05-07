@@ -21,7 +21,7 @@
         {{ if $media }}
 
           {{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
-          {{ $mediagallery :=.Site.GetPage "page" (print "gallery/" .Params.media ".md") }}
+          {{ $mediagallery := .Site.GetPage "page" (print "gallery/" (lower .Params.media) ".md") }}
             
             {{ if $mediagallery }}
 
