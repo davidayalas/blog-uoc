@@ -1,4 +1,4 @@
 ---
-title: Media
+title: Resources
 ---
 

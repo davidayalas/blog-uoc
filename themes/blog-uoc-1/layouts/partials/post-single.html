@@ -19,24 +19,27 @@
         {{ $media := .Params.media }}
 
         {{ if $media }}
-          {{ with .Site.GetPage "page" "media/index.md" }}
-            {{ $mediapage := .Resources.GetMatch (print $media ".md") }}
 
+          {{ $mediaPage := .Site.GetPage "page" "media/index.md"}}
+          {{ $mediagallery :=.Site.GetPage "page" (print "gallery/" .Params.media ".md") }}
             
-            {{ if $mediapage }}
-              {{ $mediaimage := .Resources.GetMatch (replace $mediapage.Params.image "/ca/media/" "") }}
-              {{ if $mediaimage }}
+            {{ if $mediagallery }}
+
+              {{ $image := (replace $mediagallery.Params.image "/ca/media/" "") }}
+              {{ $resource := $mediaPage.Resources.GetMatch $image }}
                 
-                {{ $caption := (index $mediapage.Params (print "title_" $.Lang)) }}
+              {{ if $resource }}
+                
+                {{ $caption := (index $mediagallery.Params (print "title_" $.Lang)) }}
 
                 {{ if $caption }}
                 <figure>
                 {{ end }}
 
-                {{ $small := $mediaimage.Resize "300x" }} 
-                {{ $large := $mediaimage }}
-                {{ if gt $mediaimage.Width 600 }}                  
-                  {{ $large := $mediaimage.Resize "600x" }} 
+                {{ $small := $resource.Resize "300x" }} 
+                {{ $large := $resource }}
+                {{ if gt $resource.Width 600 }}                  
+                  {{ $large := $resource.Resize "600x" }} 
                 {{ end }}
 
                   <picture>
@@ -58,7 +61,7 @@
 
 
               {{ end }}
-            {{ end }}
+
           {{ end }}
         {{ end }}
         <p>{{ .Description }}</p>
