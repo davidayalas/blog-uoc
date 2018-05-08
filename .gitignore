@@ -1,4 +1,4 @@
-*/_gen/*
+resources
 public
 hugo*
-git-push*
+git*

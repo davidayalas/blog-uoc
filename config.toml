@@ -1,6 +1,8 @@
 title = "Blog Template"
 baseURL = "/"
 DefaultContentLanguage = "ca"
+enableRobotsTXT = true
+
 theme = "blog-uoc-1"
 
 paginate = 10
