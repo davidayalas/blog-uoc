@@ -4,7 +4,7 @@ author: Jo
 postkey: post1
 title: 'CA - Odio nonumes eam ut, est vitae laudem deserunt in.'
 description: >-
-  **Saepe putent usu cu**. Cu cibo populo nec, eu tacimates adversarium mel.
+  Saepe putent usu cu. Cu cibo populo nec, eu tacimates adversarium mel.
   Urbanitas reprimique definitiones ne sit, malis iuvaret consequat et eam. Eu
   sale maiorum urbanitas vel, diam nemore at nec. Pri errem alienum complectitur
   an.
@@ -18,12 +18,9 @@ tags:
   - c
   - aigua
 ---
-
-Vis ne eligendi posidonium. Delenit nostrum in his. Ad sed albucius hendrerit consequat, ea est errem noluisse. Nec ex rebum sapientem, pro no iisque maiorum.
-
-At timeam facilisis nam, ei vero paulo saepe quo. Ei amet ridens usu. Nulla utinam iriure mel ut. Cum unum quaestio ut.
-
-Vero populo intellegam nec et, omnes euripidis eum at, ius solet oratio assueverit in. Eam debet ceteros te. No mea aeterno qualisque, ut mei elit commune. Cum eu case aeque ridens, placerat percipitur sed cu.
+* **Vis ne eligendi posidonium**. Delenit nostrum in his. Ad sed albucius hendrerit consequat, ea est errem noluisse. Nec ex rebum sapientem, pro no iisque maiorum.
+* _At timeam facilisis nam, ei vero paulo saepe quo_. Ei amet ridens usu. Nulla utinam iriure mel ut. Cum unum quaestio ut.
+* Vero populo intellegam nec et, omnes euripidis eum at, ius solet oratio assueverit in. Eam debet ceteros te. No mea aeterno qualisque, ut mei elit commune. Cum eu case aeque ridens, placerat percipitur sed cu.
 
 An duo natum cetero facilisis, vix vitae soluta invenire ex. Ad usu assueverit intellegebat, nam an exerci eligendi disputando. Iudico fabulas adolescens mei in, eu sed alia affert imperdiet, purto nusquam perfecto cu quo. Indoctum molestiae eum ex, vim dicit elaboraret ad. No alia ferri eam.
 
