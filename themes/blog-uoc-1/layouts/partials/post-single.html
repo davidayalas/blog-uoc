@@ -64,7 +64,8 @@
 
           {{ end }}
         {{ end }}
-        <p>{{ .Description }}</p>
+        <p>{{ markdownify .Description }}</p>
+        <p>{{ .Content }}</p>
     </div>
   </div>
 </div>
