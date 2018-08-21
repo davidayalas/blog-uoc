@@ -8,6 +8,7 @@ media: Logo
 date: '2018-05-10T11:14:07+02:00'
 categories:
   - AiS
+  - cloud
 tags:
   - aigua
   - foc
