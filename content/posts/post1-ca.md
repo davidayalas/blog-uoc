@@ -12,6 +12,7 @@ media: masterbrand
 date: '2018-01-12'
 categories:
   - general
+  - cloud
 tags:
   - a
   - b
